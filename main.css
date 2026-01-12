@@ -1,0 +1,60 @@
+:root {
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+
+  --error: #f74747;
+  --white: #ffffff;
+  --black: #000000;
+
+  --bg-blue: #cfe5ff;
+  --bg-gray: #fcfcfc;
+
+  --secondary-50: #f9fafb;
+  --secondary-100: #f3f4f6;
+  --secondary-200: #e5e7eb;
+  --secondary-400: #9ca3af;
+  --secondary-500: #6b7280;
+  --secondary-600: #4b5563;
+  --secondary-700: #374151;
+  --secondary-800: #1f2937;
+  --secondary-900: #111827;
+
+  --text-lg-regular: 400 16px/26px "Pretendard";
+  --text-lg-medium: 500 16px/26px "Pretendard";  
+  --text-lg-semibold: 600 16px/26px "Pretendard";
+  --text-lg-bold: 700 16px/26px "Pretendard";
+  --text-2lg-regular: 400 18px/26px "Pretendard";
+  --text-2lg-medium: 500 18px/26px "Pretendard";  
+  --text-2lg-semibold: 600 18px/26px "Pretendard";
+  --text-2lg-bold: 700 18px/26px "Pretendard";
+  --text-xl-regular: 400 20px/32px "Pretendard";
+  --text-xl-medium: 500 20px/32px "Pretendard";  
+  --text-xl-semibold: 600 20px/32px "Pretendard";
+  --text-xl-bold: 700 20px/32px "Pretendard";
+  --text-2xl-regular: 400 24px/32px "Pretendard";
+  --text-2xl-medium: 500 24px/32px "Pretendard";  
+  --text-2xl-semibold: 600 24px/32px "Pretendard";
+  --text-2xl-bold: 700 24px/32px "Pretendard";
+  --text-4xl-bold: 700 40px/56px "Pretendard"
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+}
+
+body,
+a,
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+*{
+  box-sizing: border-box;
+}
