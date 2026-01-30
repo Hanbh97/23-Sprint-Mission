@@ -5,8 +5,8 @@
   background-color: var(--white);
   width: 100%;
   max-width: 1920px;
-  margin: 9.5px auto;
-  padding: 0 400px;
+  margin: 0 auto;
+  padding: 9.5px 400px;
 }
 
 .header > nav {
