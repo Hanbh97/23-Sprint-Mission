@@ -43,13 +43,6 @@ body {
   font-family: "Pretendard", sans-serif;
 }
 
-body,
-a,
-h1,
-p {
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
