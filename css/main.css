@@ -1,4 +1,5 @@
 :root {
+  --primary-50: #E6F2FF;
   --primary-100: #3692ff;
   --primary-200: #1967d6;
   --primary-300: #1251aa;
@@ -20,6 +21,11 @@
   --secondary-800: #1f2937;
   --secondary-900: #111827;
 
+  
+  --text-md-regular: 400 14px/24px "Pretendard";
+  --text-md-medium: 500 14px/24px "Pretendard";
+  --text-md-semibold: 600 14px/24px "Pretendard";
+  --text-md-bold: 700 14px/24px "Pretendard";
   --text-lg-regular: 400 16px/26px "Pretendard";
   --text-lg-medium: 500 16px/26px "Pretendard";  
   --text-lg-semibold: 600 16px/26px "Pretendard";
