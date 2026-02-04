@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.header-logo {
+  width: 396px;
+  height: 132px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 24px;
+  width: 640px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.input > label {
+  font: var(--text-2lg-bold);
+  color: var(--secondary-800);
+}
+
+#login-email,
+#login-password {
+  height: 56px;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--secondary-100);
+  font: var(--text-lg-regular);
+  color: var(--secondary-800);
+}
+
+.login-password-content {
+  position: relative;
+}
+
+.visibility-button {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.login-button {
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--primary-100);
+  font: var(--text-xl-semibold);
+  color: var(--secondary-100);
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  padding: 16px 23px;
+  border-radius: 8px;
+  background-color: var(--primary-50);
+}
+
+.social-login > span {
+  font: var(--text-lg-medium);
+  color: var(--secondary-800);
+}
+
+.social-login-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-image {
+  width: 42px;
+  height: 42px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.signup-script {
+  font: var(--text-md-medium);
+  color: var(--secondary-800);
+}
+
+.signup-button {
+  font: var(--text-md-medium);
+  color: var(--primary-100);
+  text-decoration: underline;
+}
