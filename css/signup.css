@@ -115,3 +115,42 @@ main {
   color: var(--primary-100);
   text-decoration: underline;
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+  body {
+    padding: 60px 16px;
+  }
+  .header-logo {
+    width: 198px;
+    height: 66px;
+  }
+
+  main {
+    margin-top: 24px;
+    gap: 24px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .main-form {
+    gap: 16px;
+    width: 100%;
+  }
+
+  .input {
+    gap: 8px;
+  }
+
+  .input > label {
+    font: var(--text-md-bold);
+  }
+
+  .signup-password-content {
+    position: relative;
+  }
+
+  .social-login {
+    height: 75px;
+    padding: 16px 24px;
+  }
+}
