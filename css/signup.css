@@ -38,10 +38,10 @@ main {
   color: var(--secondary-800);
 }
 
-#login-email,
-#login-nickname,
-#login-password,
-#login-password-confirm {
+#signup-email,
+#signup-nickname,
+#signup-password,
+#signup-password-confirm {
   height: 56px;
   width: 100%;
   padding: 16px 24px;
@@ -52,7 +52,7 @@ main {
   color: var(--secondary-800);
 }
 
-.login-password-content {
+.signup-password-content {
   position: relative;
 }
 
