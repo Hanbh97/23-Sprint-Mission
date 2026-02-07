@@ -1,5 +1,6 @@
 const emailInput = document.querySelector('#login-email');
 const passwordInput = document.querySelector('#login-password');
+const visibilityButton = document.querySelector('.visibility-button');
 
 function checkEmail(e) {
   const REQUIRED_MESSAGE = "이메일을 입력해주세요.";
@@ -59,5 +60,22 @@ function checkPassword(e) {
   errorText.textContent = '';
 }
 
+function changePasswordVisibility(e) {
+  const visibilityOnImage = './img/ic_visibility_on.svg';
+  const visibilityOffImage = './img/ic_visibility_off.svg';
+
+  const inputWrapper = e.target.previousElementSibling;
+  const inputType = inputWrapper.type;
+
+  if(inputType === 'password'){
+    visibilityButton.src = visibilityOnImage;
+    inputWrapper.type = 'text';
+  } else {
+    visibilityButton.src = visibilityOffImage;
+    inputWrapper.type = 'password';    
+  }
+}
+
 emailInput.addEventListener('focusout', checkEmail);
 passwordInput.addEventListener('focusout', checkPassword);
+visibilityButton.addEventListener('click', changePasswordVisibility);

@@ -76,10 +76,11 @@ p.wrong-input {
 
 .visibility-button {
   position: absolute;
-  top: 16px;
+  top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .login-button {
