@@ -1,6 +1,7 @@
 const emailInput = document.querySelector('#signup-email');
 const nicknameInput = document.querySelector('#signup-nickname');
 const passwordInput = document.querySelector('#signup-password');
+const passwordConfirmInput = document.querySelector('#signup-password-confirm');
 
 function checkEmail(e) {
   const REQUIRED_MESSAGE = "이메일을 입력해주세요.";
@@ -81,6 +82,29 @@ function checkPassword(e) {
   errorText.textContent = '';
 }
 
+function checkPasswordConfirm(e) {
+  const WRONG_MESSAGE = "비밀번호가 일치하지 않습니다.";
+  
+  const inputValue = e.target.value.trim();
+
+  const inputWrapper = e.target.closest('.input');
+  const errorInput = inputWrapper.querySelector('.input-main');
+  const errorText = inputWrapper.querySelector('.error-message');
+  const passwordValue = passwordInput.value.trim();
+
+  if(inputValue !== passwordValue){
+    errorText.classList.add('wrong-input');
+    errorInput.classList.add('wrong-input');
+    errorText.textContent = WRONG_MESSAGE;
+    return;
+  }
+
+  errorText.classList.remove('wrong-input');
+  errorInput.classList.remove('wrong-input');
+  errorText.textContent = '';
+}
+
 emailInput.addEventListener('focusout', checkEmail);
 nicknameInput.addEventListener('focusout', checkNickname);
 passwordInput.addEventListener('focusout', checkPassword);
+passwordConfirmInput.addEventListener('focusout', checkPasswordConfirm);

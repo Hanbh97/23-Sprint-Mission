@@ -69,7 +69,8 @@ p.wrong-input {
 
 #signup-email.wrong-input,
 #signup-nickname.wrong-input,
-#signup-password.wrong-input {
+#signup-password.wrong-input,
+#signup-password-confirm.wrong-input {
   border: 1px solid var(--error);
 }
 
