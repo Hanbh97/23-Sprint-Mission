@@ -67,7 +67,8 @@ p.wrong-input {
   color: var(--secondary-800);
 }
 
-#signup-email.wrong-input {
+#signup-email.wrong-input,
+#signup-nickname.wrong-input {
   border: 1px solid var(--error);
 }
 
