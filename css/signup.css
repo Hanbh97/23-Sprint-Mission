@@ -68,7 +68,8 @@ p.wrong-input {
 }
 
 #signup-email.wrong-input,
-#signup-nickname.wrong-input {
+#signup-nickname.wrong-input,
+#signup-password.wrong-input {
   border: 1px solid var(--error);
 }
 
@@ -78,10 +79,11 @@ p.wrong-input {
 
 .visibility-button {
   position: absolute;
-  top: 16px;
+  top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .signup-button {
