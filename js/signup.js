@@ -2,6 +2,20 @@ const emailInput = document.querySelector('#signup-email');
 const nicknameInput = document.querySelector('#signup-nickname');
 const passwordInput = document.querySelector('#signup-password');
 const passwordConfirmInput = document.querySelector('#signup-password-confirm');
+const signupButton = document.querySelector('.signup-button');
+
+let isCorrectEmail = false;
+let isCorrectNickname = false;
+let isCorrectPassword = false;
+let isCorrectPasswordConfirm = false;
+
+function updateButtonState() {
+  if(isCorrectEmail && isCorrectNickname && isCorrectPassword && isCorrectPasswordConfirm){
+    signupButton.disabled = false;
+  } else {
+    signupButton.disabled = true;
+  }
+}
 
 function checkEmail(e) {
   const REQUIRED_MESSAGE = "이메일을 입력해주세요.";
@@ -17,6 +31,8 @@ function checkEmail(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = REQUIRED_MESSAGE;
+    isCorrectEmail = false;
+    updateButtonState();
     return;
   }
 
@@ -24,12 +40,16 @@ function checkEmail(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = WRONG_MESSAGE;
+    isCorrectEmail = false;
+    updateButtonState();    
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectEmail = true;
+  updateButtonState();  
 }
 
 function checkNickname(e) {
@@ -45,12 +65,16 @@ function checkNickname(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = REQUIRED_MESSAGE;
+    isCorrectNickname = false;
+    updateButtonState();
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectNickname = true;
+  updateButtonState();
 }
 
 function checkPassword(e) {
@@ -67,6 +91,8 @@ function checkPassword(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = REQUIRED_MESSAGE;
+    isCorrectPassword = false;
+    updateButtonState();
     return;
   }
 
@@ -74,12 +100,16 @@ function checkPassword(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = WRONG_MESSAGE;
+    isCorrectPassword = false;
+    updateButtonState();
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectPassword = true; 
+  updateButtonState();
 }
 
 function checkPasswordConfirm(e) {
@@ -96,15 +126,24 @@ function checkPasswordConfirm(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = WRONG_MESSAGE;
+    isCorrectPasswordConfirm = false;
+    updateButtonState();
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectPasswordConfirm = true;
+  updateButtonState();
 }
+
+signupButton.addEventListener('click', () => {
+  window.location.href = './login.html';
+})
 
 emailInput.addEventListener('focusout', checkEmail);
 nicknameInput.addEventListener('focusout', checkNickname);
 passwordInput.addEventListener('focusout', checkPassword);
 passwordConfirmInput.addEventListener('focusout', checkPasswordConfirm);
+updateButtonState();

@@ -97,6 +97,11 @@ p.wrong-input {
   cursor: pointer;
 }
 
+.signup-button:disabled {
+  background-color: var(--secondary-400);
+  cursor: default;
+}
+
 .social-login {
   display: flex;
   justify-content: space-between;
