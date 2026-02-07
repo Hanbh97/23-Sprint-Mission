@@ -181,6 +181,10 @@ p.wrong-input {
     position: relative;
   }
 
+  .visibility-button {
+    top: 16px;
+  }
+  
   .social-login {
     height: 75px;
     padding: 16px 24px;
