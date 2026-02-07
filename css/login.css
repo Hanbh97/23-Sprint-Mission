@@ -90,6 +90,12 @@ p.wrong-input {
   background-color: var(--primary-100);
   font: var(--text-xl-semibold);
   color: var(--secondary-100);
+  cursor: pointer;
+}
+
+.login-button:disabled {
+  background-color: var(--secondary-400);
+  cursor: default;
 }
 
 .social-login {

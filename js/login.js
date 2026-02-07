@@ -1,6 +1,18 @@
 const emailInput = document.querySelector('#login-email');
 const passwordInput = document.querySelector('#login-password');
 const visibilityButton = document.querySelector('.visibility-button');
+const loginButton = document.querySelector('.login-button');
+
+let isCorrectEmail = false;
+let isCorrectPassword = false;
+
+function updateButtonState() {
+  if(isCorrectEmail && isCorrectPassword){
+    loginButton.disabled = false;
+  } else {
+    loginButton.disabled = true;
+  }
+}
 
 function checkEmail(e) {
   const REQUIRED_MESSAGE = "이메일을 입력해주세요.";
@@ -16,6 +28,8 @@ function checkEmail(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = REQUIRED_MESSAGE;
+    isCorrectEmail = false;
+    updateButtonState();
     return;
   }
 
@@ -23,12 +37,16 @@ function checkEmail(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = WRONG_MESSAGE;
+    isCorrectEmail = false;
+    updateButtonState();
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectEmail = true;
+  updateButtonState();
 }
 
 function checkPassword(e) {
@@ -45,6 +63,8 @@ function checkPassword(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = REQUIRED_MESSAGE;
+    isCorrectPassword = false;
+    updateButtonState();
     return;
   }
 
@@ -52,12 +72,16 @@ function checkPassword(e) {
     errorText.classList.add('wrong-input');
     errorInput.classList.add('wrong-input');
     errorText.textContent = WRONG_MESSAGE;
+    isCorrectPassword = false;
+    updateButtonState();
     return;
   }
 
   errorText.classList.remove('wrong-input');
   errorInput.classList.remove('wrong-input');
   errorText.textContent = '';
+  isCorrectPassword = true;
+  updateButtonState();
 }
 
 function changePasswordVisibility(e) {
@@ -76,6 +100,11 @@ function changePasswordVisibility(e) {
   }
 }
 
+loginButton.addEventListener('click', () => {
+  window.location.href = './items.html';
+})
+
 emailInput.addEventListener('focusout', checkEmail);
 passwordInput.addEventListener('focusout', checkPassword);
 visibilityButton.addEventListener('click', changePasswordVisibility);
+updateButtonState();
