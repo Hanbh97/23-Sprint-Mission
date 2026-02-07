@@ -2,6 +2,7 @@ const emailInput = document.querySelector('#signup-email');
 const nicknameInput = document.querySelector('#signup-nickname');
 const passwordInput = document.querySelector('#signup-password');
 const passwordConfirmInput = document.querySelector('#signup-password-confirm');
+const visibilityButtons = document.querySelectorAll('.visibility-button');
 const signupButton = document.querySelector('.signup-button');
 
 let isCorrectEmail = false;
@@ -138,6 +139,23 @@ function checkPasswordConfirm(e) {
   updateButtonState();
 }
 
+function changePasswordVisibility(e) {
+  const visibilityOnImage = './img/ic_visibility_on.svg';
+  const visibilityOffImage = './img/ic_visibility_off.svg';
+
+  const visibilityButton = e.target;
+  const input = visibilityButton.previousElementSibling;
+  const inputType = input.type;
+
+  if(inputType === 'password'){
+    visibilityButton.src = visibilityOnImage;
+    input.type = 'text';
+  } else {
+    visibilityButton.src = visibilityOffImage;
+    input.type = 'password';    
+  }
+}
+
 signupButton.addEventListener('click', () => {
   window.location.href = './login.html';
 })
@@ -146,4 +164,5 @@ emailInput.addEventListener('focusout', checkEmail);
 nicknameInput.addEventListener('focusout', checkNickname);
 passwordInput.addEventListener('focusout', checkPassword);
 passwordConfirmInput.addEventListener('focusout', checkPasswordConfirm);
+visibilityButtons.forEach(button => button.addEventListener('click', changePasswordVisibility));
 updateButtonState();
