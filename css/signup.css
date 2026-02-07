@@ -29,13 +29,28 @@ main {
 .input {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   width: 100%;
+}
+
+.input-main {
+  margin-top: 8px;
 }
 
 .input > label {
   font: var(--text-2lg-bold);
   color: var(--secondary-800);
+}
+
+p.wrong-input {
+  display: block;
+}
+
+.error-message {
+  display: none;
+  padding-left: 16px;
+  font: var(--text-md-semibold);
+  color: var(--error);
 }
 
 #signup-email,
@@ -50,6 +65,10 @@ main {
   background-color: var(--secondary-100);
   font: var(--text-lg-regular);
   color: var(--secondary-800);
+}
+
+#signup-email.wrong-input {
+  border: 1px solid var(--error);
 }
 
 .signup-password-content {
@@ -143,6 +162,10 @@ main {
 
   .input > label {
     font: var(--text-md-bold);
+  }
+
+  .input-main {
+    margin-top: 0;
   }
 
   .signup-password-content {

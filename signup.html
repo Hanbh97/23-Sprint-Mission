@@ -20,11 +20,13 @@
           <label for="signup-email">이메일</label>
           <input 
             id="signup-email" 
+            class="input-main"
             name="email" 
             type="email"
             placeholder="이메일을 입력해주세요" 
             required
           >
+          <p class="error-message"></p>
         </div>
         <div class="input">
           <label for="signup-nickname">닉네임</label>
@@ -82,5 +84,6 @@
         <a class="login-button" href="./login.html">로그인</a>
       </div>
     </main>
+    <script type="module" src="./js/signup.js"></script>
   </body>
 </html>
