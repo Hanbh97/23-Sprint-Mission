@@ -35,6 +35,14 @@ main {
 
 .input-main {
   margin-top: 8px;
+  padding: 16px 24px;
+  height: 56px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--secondary-100);
+  font: var(--text-lg-regular);
+  color: var(--secondary-800);
 }
 
 .input > label {
@@ -53,20 +61,7 @@ p.wrong-input {
   color: var(--error);
 }
 
-#login-email,
-#login-password {
-  height: 56px;
-  width: 100%;
-  padding: 16px 24px;
-  border: none;
-  border-radius: 12px;
-  background-color: var(--secondary-100);
-  font: var(--text-lg-regular);
-  color: var(--secondary-800);
-}
-
-#login-email.wrong-input,
-#login-password.wrong-input {
+.input-main.wrong-input {
   border: 1px solid var(--error);
 } 
 
